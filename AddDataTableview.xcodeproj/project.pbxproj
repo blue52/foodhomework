@@ -62,13 +62,13 @@
 		01878D1B1D508F12001F2ED6 /* AddDataTableview */ = {
 			isa = PBXGroup;
 			children = (
+				01878D201D508F12001F2ED6 /* Main.storyboard */,
 				01878D1C1D508F12001F2ED6 /* AppDelegate.swift */,
 				012E18F81D5440B8000738A5 /* Food.swift */,
 				01878D341D50F847001F2ED6 /* AddTableViewController.swift */,
 				01878D321D50977C001F2ED6 /* MovieTableViewController.swift */,
 				01878D361D519F0E001F2ED6 /* EditTableViewController.swift */,
 				01878D1E1D508F12001F2ED6 /* ViewController.swift */,
-				01878D201D508F12001F2ED6 /* Main.storyboard */,
 				01878D231D508F12001F2ED6 /* Assets.xcassets */,
 				01878D251D508F12001F2ED6 /* LaunchScreen.storyboard */,
 				01878D281D508F12001F2ED6 /* Info.plist */,

@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var dic:[String:String] = [:]
-    
+    var dic = [String:String]() //宣告空dictionary寫法之一(共有四種)
+    //var dic = Dictionary<String,String>()
    
     @IBOutlet weak var showFoodname: UILabel!
     
@@ -35,10 +35,10 @@ class ViewController: UIViewController {
         if let dicdetail = self.editdic {
             dic = dicdetail
             
-            if let words = self.showFoodname {
+        if let words = self.showFoodname {
                 
-                words.text = dic["name"]
-                showFooddetail.text = dic["match"]
+            words.text = dic["name"]
+            showFooddetail.text = dic["match"]
                 
             }
         }

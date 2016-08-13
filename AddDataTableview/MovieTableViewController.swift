@@ -10,8 +10,8 @@ import UIKit
 
 class MovieTableViewController: UITableViewController {
     //var foodArray = [["name":"黯然銷魂飯", "match": "牛雜湯"],["name":"奪命香雞腿", "match": "凍檸茶"]]
-    //var foodArray2:[Food] = []
-    var foodArray:Array<Dictionary<String,String>> = [] //如少掉Array就不能新增insert
+    
+    var foodArray:Array<Dictionary<String,String>> = [] //如少掉Array就不能新增
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,14 +47,15 @@ class MovieTableViewController: UITableViewController {
         
         let foodDic = noti.userInfo as! [String:String]
         //let foodData = noti.userInfo as! String
-        self.foodArray.insert(foodDic, at: 0)
+        //self.foodArray.insert(foodDic, at: 0)//這個語法比較不熟，故採用下面append新增
+        self.foodArray.append(foodDic)
         let indexPath = IndexPath(row: 0, section: 0)
         self.tableView.insertRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         self.tableView.reloadData()
     }
     func editfoodNoti(noti:Notification){
         let notiDic = noti.userInfo as! [String:String]
-        let index = Int(notiDic["index"]!)
+        let index = Int(notiDic["index"]!)//是為了將字串轉成Int，讓index變成數字
         foodArray[index!] = notiDic
         self.tableView.reloadData()
     }
